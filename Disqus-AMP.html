@@ -1,0 +1,66 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">#disqus_thread {font-family:false} a {color:#false}</style><script src="./AMP-Disqus_files/embed.js.download" data-timestamp="1597894867204"></script><link rel="prefetch" as="style" href="https://c.disquscdn.com/next/embed/styles/lounge.6525595c7a9874fa10bd041275e40f17.css"><link rel="prefetch" as="script" href="https://c.disquscdn.com/next/embed/common.bundle.9061cdaed1273d430eb02357766a8560.js"><link rel="prefetch" as="script" href="https://c.disquscdn.com/next/embed/lounge.bundle.277f9ff2e410eacf604c2762b3003e57.js"><link rel="prefetch" as="script" href="https://disqus.com/next/config.js"></head><body><div id="disqus_thread"><iframe id="dsq-app2162" name="dsq-app2162" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" sandbox="allow-forms allow-popups allow-same-origin allow-scripts" width="100%" src="./AMP-Disqus_files/saved_resource.html" style="height: 586px !important;"></iframe><iframe id="dsq-app2159" name="dsq-app2159" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./AMP-Disqus_files/saved_resource(1).html" horizontalscrolling="no" verticalscrolling="no" style="height: 307px !important;"></iframe></div>
+<script>
+  window.addEventListener('message', receiveMessage, false);
+
+  function receiveMessage(event) {
+    if (event.data) {
+      var msg;
+      try {
+        msg = JSON.parse(event.data);
+      } catch (err) {}
+      if (!msg)
+        return false;
+      if (msg.name === 'resize') {
+        window.parent.postMessage({
+          sentinel: 'amp',
+          type: 'embed-size',
+          height: msg.data.height
+        }, '*');
+      }
+    }
+  }
+
+  function getQueryVariable(variable) {
+    var query = window.location.search.substring(1);
+    var vars = query.split('&');
+    for (var i = 0; i < vars.length; i++) {
+      var pair = vars[i].split('=');
+      if (pair[0] == variable) {
+        return pair[1];
+      }
+    }
+    return (false);
+  }
+  
+    var css = '#disqus_thread {font-family:' + getQueryVariable('fontBodyFamily') + '} a {color:#' + getQueryVariable('fontLinkColor') + '}',
+    head = document.head || document.getElementsByTagName('head')[0],
+    style = document.createElement('style');
+style.type = 'text/css';
+if (style.styleSheet){
+  style.styleSheet.cssText = css;
+} else {
+  style.appendChild(document.createTextNode(css));
+}
+head.appendChild(style);
+
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    var disqus_shortname = getQueryVariable('shortname');
+    var disqus_config = function () {
+        this.page.url = getQueryVariable('canonicalurl');
+        this.page.identifier = '';
+        this.page.title = getQueryVariable('title');
+    };
+    
+    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+        var d = document, s = d.createElement('script');
+        
+        s.src = '//'+disqus_shortname+'.disqus.com/embed.js';  // IMPORTANT: Replace EXAMPLE with your forum shortname!
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<iframe __idm_frm__="4885" style="display: none;" src="./AMP-Disqus_files/saved_resource(2).html"></iframe><iframe id="dsq-app2164" name="dsq-app2164" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./AMP-Disqus_files/saved_resource(3).html" style="height: 100% !important; position: fixed !important; top: 0px !important; right: 0px !important; left: auto !important; bottom: auto !important; z-index: 2147483647 !important; display: none !important;"></iframe></body></html>
